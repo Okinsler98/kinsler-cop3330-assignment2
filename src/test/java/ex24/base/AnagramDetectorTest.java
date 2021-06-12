@@ -1,6 +1,11 @@
-package ex24.base;
-import org.junit.jupiter.api.Test;
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Orion Kinsler
+ */
 
+package ex24.base;
+
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AnagramDetectorTest {

@@ -10,12 +10,14 @@ import java.util.Random;
 
 
 public class NumberGame {
+    private static final Scanner in = new Scanner(System.in);
+
     private static int answer;
     private static int guessCount = 1;
     private static String playAgain;
 
 
-    public boolean guessingGame(String difficulty, String guess, Scanner in){
+    public boolean guessingGame(String difficulty, String guess){
         Random rand = new Random();
 
         switch (Integer.parseInt(difficulty)){
@@ -30,8 +32,12 @@ public class NumberGame {
                 break;
             default :
                 System.out.println("Difficulty can only be a number between 1 and 3.");
-                return guessingGame(difficulty, guess, in);
+                return guessingGame(difficulty, guess);
         }
+        return compareGuess(guess, answer);
+    }
+
+    public boolean compareGuess(String guess, int answer){
         while (true){
             if (Integer.parseInt(guess) < answer){
                 System.out.print("Too low. Guess again: ");
@@ -56,7 +62,7 @@ public class NumberGame {
         }
     }
 
-    public static String enterValue(Scanner in){
+    public String enterValue(Scanner in){
         String output = in.next();
         guessCount++;
         for (int i = 0; i < output.length(); i++){

@@ -19,7 +19,7 @@ public class Solution32 {
 
         while (playAgain){
             readInitialInput();
-            playAgain = game.guessingGame(difficulty,guess, in);
+            playAgain = game.guessingGame(difficulty,guess);
         }
     }
 

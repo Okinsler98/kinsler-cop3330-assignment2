@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+readInput -> calculateSum : Loop 5 times
+calculateSum -> generateOutput
+
+@enduml
